@@ -1,0 +1,21 @@
+#goods{
+    
+}
+
+.good-item{
+    width: 200px;
+    height: 330px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px;
+    float: left;
+}
+
+.good-item button{
+    display: block;
+    margin: 20px auto;
+}
+
+#clear-cart{
+    
+}

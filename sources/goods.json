@@ -1,0 +1,32 @@
+{
+  "11292" : {
+    "name" : "Яблоки",
+    "cost" : 2,
+    "description" : "Яблоки спелые, красивые",
+    "image" : "images/apple.png"
+  },
+  "11294" : {
+    "name" : "Лимоны",
+    "cost" : 4,
+    "description" : "Желтые лимоны, классные",
+    "image" : "images/lemon.png"
+  },
+  "11295" : {
+    "name" : "Клубника",
+    "cost" : 7,
+    "description" : "Спелая и сочная клубника",
+    "image" : "images/strawberry.png"
+  },
+   "11296" : {
+    "name" : "Помидор",
+    "cost" : 5,
+    "description" : "Красный помидор",
+    "image" : "images/tomato.png"
+  },
+    "11297" : {
+    "name" : "Вишня",
+    "cost" : 6,
+    "description" : "Спелая и сочная вишня",
+    "image" : "images/cherry.png"
+  }
+}
