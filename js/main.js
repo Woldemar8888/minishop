@@ -3,12 +3,13 @@ let cart = {}
 $('document').ready(function(){
     loadGoods();
     checkCart();
+    feelHeader();
 });
 
 function loadGoods(){
     //download goods on page
     $.getJSON('sources/goods.json', function(data){
-        let out = '';
+        let out = '';   
         for (let key in data){
             out+='<div class="good-item">'
             out+= '<h3>' + data[key]['name'] + '</h3>'
@@ -18,6 +19,7 @@ function loadGoods(){
             out+='<button class="add" data-art="' + key + '">Купить</button>'
             out+='</div>'
         }
+        
         $('#goods').html(out);
         
         $('button.add').on('click', addToCart );
@@ -35,10 +37,27 @@ function addToCart(){
     }
     
     localStorage.setItem('cart', JSON.stringify(cart));
+    feelHeader();
 }
 
 function checkCart(){
     if(localStorage.getItem('cart') != null){
         cart = JSON.parse(localStorage.getItem('cart'));
     }
+}
+
+function countGoodsTotal(){
+    let count = 0;
+    for(let good in cart){
+        count += cart[good];
+    }
+    return count;
+}
+
+function feelHeader(){
+    let header = '<div id="cart">'+
+            '<a href="cart"><img id="basket" alt="Корзина" title="В корзину"  src="sources/images/basket.jpg"></a>' + 
+            '<div id="counter">'+ countGoodsTotal() +'</div>'
+            '</div>';
+        $('#header').html(header);
 }

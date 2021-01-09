@@ -7,6 +7,7 @@ $.getJSON('sources/goods.json', function(data){
     
     function showCart(){
         let out = '';
+        out += '<a id="to-main-paage" href="/">На главную</a>';
         if(Object.keys(cart).length != 0){
             out += '<table><tr>';
             out += '<th>Товар</th>';
@@ -28,7 +29,7 @@ $.getJSON('sources/goods.json', function(data){
         }else{
             out+='<p>Корзина пуста</p>';
         }
-        
+            
         
         $('#cart').html(out);
         $('button.plus-button').on('click', addGoodCount);
