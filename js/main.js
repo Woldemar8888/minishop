@@ -15,7 +15,10 @@ function loadGoods(){
             out+= '<h3>' + data[key]['name'] + '</h3>'
             out+= '<p>Цена:<b> ' + data[key]['cost'] + '</b></p>'
             out+= '<p>' + data[key]['description'] + '</p>'
-            out+= '<p><img src=sources/' + data[key]['image'] + '></p>'
+            out+= '<p>'+
+                '<img src=sources/' + data[key]['image'] + 
+                ' alt="'+data[key]['name']+'"' +
+                '></p>'
             out+='<button class="add" data-art="' + key + '">Купить</button>'
             out+='</div>'
         }
