@@ -3,7 +3,6 @@ let cart = {}
 $('document').ready(function(){
     loadGoods();
     checkCart();
-    showMyCart();
 });
 
 function loadGoods(){
@@ -36,31 +35,10 @@ function addToCart(){
     }
     
     localStorage.setItem('cart', JSON.stringify(cart));
-    showMyCart();
 }
 
 function checkCart(){
     if(localStorage.getItem('cart') != null){
         cart = JSON.parse(localStorage.getItem('cart'));
     }
-}
-
-function showMyCart(){
-    let out='';
-    for(let item in cart){
-        out+= item + '---' + cart[item] +'<br>';
-    }
-    if(Object.keys(cart).length !=0){
-        out+='<button id="clear-cart">Oчистить корзину</button>';
-    }
-    
-    $('#cart').html(out);
-    
-    $('#clear-cart').on('click', clearMyCart );
-}
-
-function clearMyCart(){
-    localStorage.removeItem('cart');
-    cart = {};
-    showMyCart();
 }
