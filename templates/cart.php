@@ -1,3 +1,3 @@
 <?php
-    echo '<div id="cart"></div>';
+    echo '<div class="container"><div id="cart"></div></div>';
 ?>

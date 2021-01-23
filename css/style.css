@@ -39,7 +39,7 @@ a{
     right: 0;
 }
 
-#goods{
+.container{
     width: 1200px;
     margin: 0 auto;
 }
@@ -96,3 +96,66 @@ a{
     top: 9px;
     right: 5px;
 }
+
+@media screen and (max-width: 1220px){
+    .container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    #cart table thead {
+        display: none;
+    }
+    
+    #cart table td.count {
+        padding-left: 8px;
+    }
+    
+    #cart table{
+        width: 100%;
+        display: table;
+    }
+    
+    #cart table tr {
+        border–bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 15px;
+    }
+    #cart table td {
+        border–bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+    }
+    #cart table td:before {
+        content: attr(aria-label);
+        font-weight: 700;
+        float: left;
+    }
+    
+    .plus-button {
+        top: 2px;
+        font-size: 25px;
+        padding: 1px 7px;
+    }
+    
+    .plus-button{
+        right: 60px;
+    }
+    
+    .minus-button {
+        right: 7px;
+        top: 2px;
+        font-size: 27px;
+        padding: 1px 11px 4px;
+        line-height: 26px;
+    }
+    
+    .delete-button {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
