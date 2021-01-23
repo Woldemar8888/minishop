@@ -22,4 +22,8 @@
     <link rel="shortcut icon" href="/sources/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header id="header"></header>
+   <?php
+       if($route ==''){
+           echo '<header id="header"></header>';
+       }
+    ?>
